@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaWave | English Learning Academy</title>
+    <meta
+      name="description"
+      content="Advanced English learning platform with A1-C2 curriculum, dynamic lesson generation, grammar, vocabulary, and quizzes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow">
+      <div class="blob blob-purple"></div>
+      <div class="blob blob-teal"></div>
+      <div class="blob blob-cyan"></div>
+    </div>
+
+    <div class="app-shell">
+      <header class="topbar glass-panel">
+        <div class="brand-wrap">
+          <div class="brand-mark">LW</div>
+          <div class="brand-copy">
+            <p class="eyebrow">Learning Suite</p>
+            <h1>LinguaWave</h1>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Global navigation">
+          <button class="nav-button active" type="button">Dashboard</button>
+          <button class="nav-button" type="button">Lessons</button>
+          <button class="nav-button" type="button">Practice</button>
+          <button class="nav-button" type="button">Progress</button>
+        </nav>
+
+        <div class="topbar-controls">
+          <label class="level-select-wrap">
+            <span>Proficiency</span>
+            <select id="level-select" aria-label="Select proficiency level">
+              <option value="A1">A1 - Beginner</option>
+              <option value="A2">A2 - Elementary</option>
+              <option value="B1">B1 - Intermediate</option>
+              <option value="B2">B2 - Upper Intermediate</option>
+              <option value="C1">C1 - Advanced</option>
+              <option value="C2">C2 - Proficiency</option>
+            </select>
+          </label>
+
+          <div class="profile-chip glass-panel">
+            <div class="avatar">AL</div>
+            <div>
+              <p class="muted">Learner</p>
+              <strong>A. Lanier</strong>
+            </div>
+          </div>
+
+          <div class="streak-pill glass-panel">
+            <span class="flame">🔥</span>
+            <span>18 day streak</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-shell">
+        <section class="dashboard-overview" aria-labelledby="dashboard-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Study overview</p>
+              <h2 id="dashboard-heading">Your learning hub</h2>
+            </div>
+            <div class="score-badge glass-panel">
+              <span>AI Coach</span>
+              <strong>92% momentum</strong>
+            </div>
+          </div>
+
+          <div id="track-grid" class="track-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="content-panel glass-panel" aria-labelledby="panel-title">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Curriculum matrix</p>
+              <h2 id="panel-title">Lessons</h2>
+            </div>
+
+            <div class="panel-tools">
+              <label class="search-shell">
+                <span class="sr-only">Search content</span>
+                <input
+                  id="search-input"
+                  type="search"
+                  placeholder="Search lessons, grammar, vocabulary..."
+                  aria-label="Search curriculum content"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div id="content-area" class="content-area" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="quiz-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-card glass-panel" role="dialog" aria-modal="true" aria-labelledby="quiz-title">
+        <button class="modal-close" id="close-quiz-modal" type="button" aria-label="Close quiz modal">
+          ×
+        </button>
+
+        <div class="modal-header">
+          <p class="eyebrow">Quiz portal</p>
+          <h3 id="quiz-title">Check your understanding</h3>
+        </div>
+
+        <div id="quiz-content" class="quiz-content"></div>
+      </div>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/quiz-engine.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
